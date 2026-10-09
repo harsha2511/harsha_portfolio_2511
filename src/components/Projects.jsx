@@ -5,7 +5,7 @@ import '../styles/projects.css';
 const PROJECTS = [
   {
     icon: '🩺',
-    name: 'skyCare — AI Medical Scribe',
+    name: 'MediScribe — AI Medical Scribe',
     year: '2026',
     status: 'In progress',
     desc: 'AI scribe that listens to a doctor–patient visit, drafts a SOAP note, codes it to ICD-10/RxNorm/LOINC and writes it into the EHR.',
@@ -21,7 +21,7 @@ const PROJECTS = [
   },
   {
     icon: '💬',
-    name: 'skyChat — AI Assistant',
+    name: 'Converse AI — Chat Assistant',
     year: '2026',
     status: 'In progress',
     desc: 'ChatGPT-style AI assistant with streaming answers, projects, and video/audio summaries — no accounts and nothing stored.',

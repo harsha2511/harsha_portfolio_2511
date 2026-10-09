@@ -9,7 +9,7 @@ Personal portfolio of **Harsha Kumari**, Software Engineer (SDE Intern @ Skypoin
 - **Hero** — intro, quick stats and resume download
 - **About** — background and focus areas
 - **Experience** — Skypoint (SDE Intern), Confiable Technocraft (UI/UX Intern), NIT Rourkela (ML Intern)
-- **Projects** — skyCare, skyChat, Automated Nucleus Segmentation, RITNotebook, WalletWiseWeb and more
+- **Projects** — MediScribe, Converse AI, Automated Nucleus Segmentation, RITNotebook, WalletWiseWeb and more
 - **Skills**, **Achievements**, **Education** and **Contact**
 
 ## Features
