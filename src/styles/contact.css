@@ -1,10 +1,8 @@
 /* ── Contact Section ── */
 #contact {
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 2.5rem 2.5rem !important;
-  justify-content: center;
-  overflow: hidden;
 }
 
 .contact-heading {
@@ -70,7 +68,7 @@
 
 .cic-label { font-size: 0.67rem; color: var(--muted); margin-bottom: 0.05rem; }
 .cic-sub   { font-size: 0.68rem; color: var(--muted); margin-bottom: 0.1rem; }
-.cic-value { font-size: 0.82rem; font-weight: 700; color: var(--highlight); }
+.cic-value { font-size: 0.82rem; font-weight: 700; color: var(--highlight); overflow-wrap: anywhere; }
 
 /* ── Right column ── */
 .contact-right { display: flex; flex-direction: column; gap: 0.65rem; }
@@ -137,10 +135,11 @@ html.light .social-item:hover img.si { filter: none; }
 .qr-emoji { font-size: 1rem; }
 
 @media (max-width: 900px) {
-  #contact { height: auto; overflow: auto; padding: 5rem 1.5rem 3rem !important; }
+  #contact { min-height: 0; padding: 3.5rem 1.5rem !important; }
   .contact-body { grid-template-columns: 1fr; }
-  .social-grid { grid-template-columns: repeat(3, 1fr); }
+  .social-grid { grid-template-columns: repeat(4, 1fr); }
 }
 @media (max-width: 600px) {
-  #contact { padding: 5rem 1.1rem 2.5rem !important; }
+  #contact { padding: 3rem 1.1rem !important; }
+  .social-grid { grid-template-columns: repeat(3, 1fr); }
 }

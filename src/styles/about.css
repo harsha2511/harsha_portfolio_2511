@@ -5,7 +5,7 @@
 .info-item { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 0.65rem; transition: border-color 0.2s; }
 .info-item:hover { border-color: var(--accent2); }
 .info-item .label { font-size: 0.67rem; color: var(--muted); margin-bottom: 0.15rem; }
-.info-item .value { font-size: 0.8rem; color: var(--text); font-weight: 500; }
+.info-item .value { font-size: 0.8rem; color: var(--text); font-weight: 500; overflow-wrap: anywhere; }
 
 .edu-card {
   background: var(--card); border: 1px solid var(--border); border-radius: 14px;
@@ -41,6 +41,10 @@
   .stats { gap: 1.5rem; }
 }
 @media (max-width: 600px) {
-  .about-info { grid-template-columns: 1fr 1fr; }
   .stat-num { font-size: 1.8rem; }
+}
+@media (max-width: 480px) {
+  .about-info { grid-template-columns: 1fr; }
+  .stats { gap: 1rem 1.25rem; }
+  .stat-num { font-size: 1.6rem; }
 }

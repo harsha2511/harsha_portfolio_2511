@@ -12,6 +12,7 @@ import Achievements from './components/Achievements';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import useScrollAnimations from './hooks/useScrollAnimations';
 
 export default function App() {
   const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark');
@@ -33,17 +34,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
-    document.querySelectorAll(
-      '.projects-grid .project-card, .achievements-grid .achievement-card, .skills-grid .skill-category'
-    ).forEach((el, i) => { el.style.transitionDelay = (i % 3) * 0.08 + 's'; });
-    return () => obs.disconnect();
-  }, []);
+  useScrollAnimations();
 
   return (
     <>

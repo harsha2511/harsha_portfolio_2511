@@ -40,6 +40,8 @@
   font-size: 0.98rem; font-weight: 700; color: var(--highlight); margin-bottom: 0.15rem;
 }
 .edu-degree { font-size: 0.82rem; color: var(--accent2); }
+.edu-location { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.2rem; }
+.edu-location i { color: var(--accent2); margin-right: 0.25rem; }
 
 .edu-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; flex-shrink: 0; }
 .edu-period {
@@ -72,7 +74,12 @@
   .edu-item { gap: 1rem; }
 }
 @media (max-width: 600px) {
-  .edu-card-top { flex-direction: column; }
-  .edu-right { align-items: flex-start; }
-  .edu-card { padding: 0.85rem; }
+  .edu-card-top { flex-direction: column; gap: 0.5rem; }
+  .edu-right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .edu-card { padding: 0.85rem; min-width: 0; }
+}
+@media (max-width: 480px) {
+  .edu-timeline::before { left: 13px; }
+  .edu-item { gap: 0.7rem; }
+  .edu-dot { width: 28px; height: 28px; font-size: 0.68rem; }
 }

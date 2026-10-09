@@ -39,7 +39,7 @@ export default function About() {
             <h2 className="section-title">Who I Am</h2>
             <div className="section-line" />
             <div className="about-text">
-              <p>I'm <span>Harsha Kumari</span>, an SDE Intern at <span>Skypoint</span> working on the Sky Command Platform in <span>Bangalore, India</span>.</p>
+              <p>I'm <span>Harsha Kumari</span>, an SDE Intern at <span>Skypoint</span> working on Sky Command, SkyMDM and SkyCare in <span>Bangalore, India</span>.</p>
               <p>I'm pursuing a B.Tech in <span>Electrical and Electronics Engineering</span> from Ramaiah Institute of Technology, Bengaluru (2022–2026). I've interned across <span>software development, UI/UX design,</span> and <span>machine learning</span> — giving me a well-rounded engineering perspective.</p>
               <p>Outside of work, I'm a competitive programmer — <span>Specialist on Codeforces</span> (max 1442), <span>3★ on CodeChef</span> (max 1712), and <span>Rank 10 in college on GFG</span>.</p>
             </div>

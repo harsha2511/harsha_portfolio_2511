@@ -38,7 +38,7 @@ html.dark {
   --shadow-lg: 0 12px 40px rgba(0,0,0,0.55);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -61,6 +61,12 @@ body {
 }
 @media (min-width: 1101px) {
   .page-wrapper.shifted { padding-left: 270px; }
+}
+
+/* Pop-ups open below the navbar and beside the profile sidebar, so both stay usable */
+@media (min-width: 1101px) {
+  body:has(.profile-sidebar.visible) .exp-modal-backdrop,
+  body:has(.profile-sidebar.visible) .proj-modal-backdrop { left: 270px; }
 }
 
 section {
@@ -106,6 +112,39 @@ section {
 .reveal-right { opacity: 0; transform: translateX(36px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .reveal-right.visible { opacity: 1; transform: translateX(0); }
 
+/* ── Scroll animations (driven by hooks/useScrollAnimations.js) ── */
+html [data-anim] {
+  opacity: 0;
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s ease;
+  transition-delay: calc(var(--d, 0s) + var(--stagger, 0s));
+  will-change: opacity, transform;
+}
+html [data-anim="up"]    { transform: translateY(44px); }
+html [data-anim="left"]  { transform: translateX(-56px); }
+html [data-anim="right"] { transform: translateX(56px); }
+html [data-anim="blur"]  { transform: translateY(24px); filter: blur(10px); }
+html [data-anim="zoom"]  { transform: translateY(40px) scale(0.9); }
+html [data-anim="flip"]  { transform: perspective(900px) rotateX(22deg) translateY(40px); transform-origin: top center; }
+html [data-anim="pop"]   { transform: scale(0.6); transition-duration: 0.5s; transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
+html [data-anim="line"]  { opacity: 1; transform: scaleX(0); transform-origin: left; transition-duration: 1s; transition-delay: calc(var(--stagger, 0s) + 0.2s); }
+html [data-anim].in      { opacity: 1; transform: none; filter: none; }
+
+/* Timeline rails draw downwards as they come into view */
+.timeline::before, .edu-timeline::before {
+  transform: scaleY(0); transform-origin: top;
+  transition: transform 1.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.timeline.drawn::before, .edu-timeline.drawn::before { transform: scaleY(1); }
+
+
+@media (prefers-reduced-motion: reduce) {
+  html [data-anim] { opacity: 1; transform: none; filter: none; transition: none; }
+  .timeline::before, .edu-timeline::before { transform: none; transition: none; }
+}
+
 .btn {
   padding: 0.6rem 1.2rem; border-radius: 100px; font-weight: 600;
   font-size: 0.8rem; cursor: pointer; text-decoration: none;
@@ -134,10 +173,10 @@ html.light .btn:hover img.si { filter: none; }
 @media (max-width: 900px) {
   :root { --sidebar-w: 0px; }
   .page-wrapper { margin-left: 0; }
-  section { height: auto; min-height: 100vh; overflow: visible; padding: 5rem 1.5rem 3rem; }
-  #about { padding-top: 5.5rem; }
+  section { padding: 3.5rem 1.5rem; }
 }
 
 @media (max-width: 600px) {
-  section { padding: 5rem 1.1rem 2.5rem; }
+  section { padding: 3rem 1.1rem; }
+  .section-line { margin-bottom: 1rem; }
 }

@@ -72,15 +72,29 @@ html.dark .theme-toggle .knob { transform: translateX(24px); }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0; }
 .hamburger span { width: 24px; height: 2px; background: var(--highlight); transition: all 0.3s; border-radius: 2px; display: block; }
 
-@media (max-width: 860px) {
+@media (max-width: 1200px) {
+  .nav-links { gap: 1.1rem; }
+  .nav-right { gap: 1rem; }
+}
+
+@media (max-width: 960px) {
   nav.topnav { padding: 0.9rem 1.5rem; }
   .nav-links {
-    display: none; flex-direction: column; align-items: flex-start; gap: 1rem;
+    display: none; flex-direction: column; align-items: stretch; gap: 0.2rem;
     position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--card); padding: 1.5rem; border-bottom: 1px solid var(--border);
+    background: var(--card); padding: 0.75rem 1.5rem 1.25rem; border-bottom: 1px solid var(--border);
     box-shadow: 0 10px 30px rgba(15,23,42,0.18);
+    max-height: calc(100vh - 60px); max-height: calc(100dvh - 60px); overflow-y: auto;
   }
   .nav-links.open { display: flex; }
-  .nav-resume-li { margin-top: 0.3rem; }
-  .hamburger { display: flex; }
+  .nav-links a { display: block; padding: 0.65rem 0; font-size: 0.95rem; }
+  .nav-links a::after { display: none; }
+  .nav-resume-li { margin-top: 0.5rem; }
+  .nav-links a.nav-resume { text-align: center; padding: 0.65rem 1.15rem; }
+  .hamburger { display: flex; padding: 0.5rem 0; }
+}
+
+@media (max-width: 600px) {
+  nav.topnav { padding: 0.8rem 1.1rem; }
+  .nav-links { padding-left: 1.1rem; padding-right: 1.1rem; }
 }

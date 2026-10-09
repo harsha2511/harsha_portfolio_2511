@@ -101,3 +101,7 @@
 @media (max-width: 600px) {
   .achievements-grid { grid-template-columns: 1fr; }
 }
+@media (hover: none) {
+  .ach-hover-overlay { display: none; }
+  .achievement-card:hover { transform: none; }
+}

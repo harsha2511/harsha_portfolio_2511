@@ -61,11 +61,11 @@
 
 /* ── Modal ── */
 .proj-modal-backdrop {
-  position: fixed; inset: 0; z-index: 2000;
+  position: fixed; inset: 0; z-index: 990;
   background: rgba(0,0,0,0.7);
   backdrop-filter: blur(8px);
   display: flex; align-items: center; justify-content: center;
-  padding: 1.5rem;
+  padding: 4.75rem 1.5rem 1.5rem;
   animation: fade-in 0.2s ease;
 }
 @keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
@@ -78,7 +78,7 @@
   max-width: 560px; width: 100%;
   position: relative;
   animation: slide-up 0.25s ease;
-  max-height: 85vh; overflow-y: auto;
+  max-height: calc(100vh - 6.25rem); overflow-y: auto;
 }
 @keyframes slide-up { from { opacity:0; transform: translateY(24px) } to { opacity:1; transform: translateY(0) } }
 
@@ -124,6 +124,27 @@
   .projects-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 }
 @media (max-width: 600px) {
-  .projects-grid { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-  .proj-modal { padding: 1.5rem; }
+  .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+  .proj-modal-backdrop { padding: 4.5rem 0.85rem 0.85rem; }
+  .proj-modal { padding: 1.5rem 1.15rem; max-height: calc(100vh - 5.35rem); max-height: calc(100dvh - 5.35rem); }
+  .proj-modal-header { flex-wrap: wrap; gap: 0.75rem; padding-right: 2rem; }
+  .proj-modal-title { flex: 1; min-width: 0; }
+  .proj-modal-gh { margin-left: 0; }
+}
+@media (max-width: 480px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* Touch devices have no hover — the whole card opens the modal instead */
+@media (hover: none) {
+  .proj-hover-overlay { display: none; }
+  .project-card:hover { transform: none; }
+}
+
+/* ── In-progress badge ── */
+.proj-status {
+  display: inline-block; margin: 0 0.4rem;
+  padding: 0.1rem 0.5rem; border-radius: 100px;
+  background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.35);
+  color: #d97706; font-size: 0.62rem; font-family: 'Fira Code', monospace;
 }

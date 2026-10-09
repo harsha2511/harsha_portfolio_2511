@@ -12,7 +12,7 @@ html.dark .hero {
   content: '';
   position: absolute;
   top: -120px; left: 50%; transform: translateX(-50%);
-  width: 620px; height: 620px;
+  width: min(620px, 100vw); height: 620px;
   background: radial-gradient(circle, rgba(37,99,235,0.10), transparent 65%);
   pointer-events: none;
 }
@@ -135,6 +135,19 @@ a.hero-contact-item:hover { color: var(--accent); }
 
 @media (max-width: 640px) {
   .hero { padding: 6rem 1.1rem 3.5rem; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
   .hero-photo, .hero-photo-wrap { width: 138px; height: 138px; }
+  .hero-tagline { font-size: 0.95rem; }
+  .hero-contact { gap: 0.5rem 1.2rem; }
+  .hero-actions { margin-bottom: 2.2rem; }
+}
+
+@media (max-width: 420px) {
+  .hero-contact { flex-direction: column; align-items: center; }
+  .hero-contact-item { overflow-wrap: anywhere; }
+  .hero-actions { gap: 0.6rem; }
+  .hero-actions .btn { padding: 0.65rem 1.1rem; }
+  .hero-actions .btn-primary { width: 100%; }
+  .hero-stat { padding: 1.1rem 0.6rem; }
+  .hero-stat-label { font-size: 0.7rem; }
 }
