@@ -16,7 +16,7 @@ const PROJECTS = [
       'Maps diagnoses, medicines and lab tests to ICD-10, RxNorm and LOINC codes, then writes the note into the clinic’s EHR over FHIR R4.',
       'Privacy by design: no database and no stored patient data — audio and text are processed in memory and discarded.',
       'One React app shipped three ways: a full web app, a Chrome side-panel extension, and an assistant docked inside the EHR chart.',
-      'Includes a mock FHIR EHR with 50 synthetic patients, a PHI-leak audit, and an evaluation suite for note quality.',
+      'Includes its own FHIR R4 EHR with 50 synthetic patients, a PHI-leak audit, and an evaluation suite for note quality.',
     ],
   },
   {
