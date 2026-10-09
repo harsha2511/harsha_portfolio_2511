@@ -58,5 +58,5 @@ The site is connected to Vercel: every push to `main` deploys to production auto
 
 - Email: [harshakumari1125@gmail.com](mailto:harshakumari1125@gmail.com)
 - LinkedIn: [linkedin.com/in/harsha-kumari](https://www.linkedin.com/in/harsha-kumari)
-- GitHub: [github.com/harsha2511kumari](https://github.com/harsha2511kumari)
+- GitHub: [github.com/harsha2511](https://github.com/harsha2511)
 - LeetCode: [leetcode.com/u/harsha2511](https://leetcode.com/u/harsha2511/)
