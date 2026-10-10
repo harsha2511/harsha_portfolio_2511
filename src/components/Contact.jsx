@@ -53,7 +53,7 @@ export default function Contact() {
               <p className="panel-desc">Connect on social platforms for updates and behind-the-scenes content.</p>
               <div className="social-grid">
                 <a href="https://www.linkedin.com/in/harsha-kumari" target="_blank" rel="noreferrer" className="social-item"><i className="fab fa-linkedin" /> LinkedIn</a>
-                <a href="https://github.com/harsha2511kumari" target="_blank" rel="noreferrer" className="social-item"><i className="fab fa-github" /> GitHub</a>
+                <a href="https://github.com/harsha2511" target="_blank" rel="noreferrer" className="social-item"><i className="fab fa-github" /> GitHub</a>
                 <a href="https://leetcode.com/u/harsha2511/" target="_blank" rel="noreferrer" className="social-item"><img src="https://cdn.simpleicons.org/leetcode" className="si" alt="" /> LeetCode</a>
                 <a href="https://codeforces.com/" target="_blank" rel="noreferrer" className="social-item"><img src="https://cdn.simpleicons.org/codeforces" className="si" alt="" /> Codeforces</a>
                 <a href="https://www.codechef.com/users/harsha_2511" target="_blank" rel="noreferrer" className="social-item"><img src="https://cdn.simpleicons.org/codechef" className="si" alt="" /> CodeChef</a>

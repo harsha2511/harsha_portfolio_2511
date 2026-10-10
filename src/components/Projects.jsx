@@ -49,7 +49,7 @@ const PROJECTS = [
       'Enhanced AI decision-making capabilities resulting in smarter, faster gameplay with a 70% improvement in game performance and efficiency.',
       'Designed a clean, interactive UI with smooth game state transitions and real-time board rendering.',
     ],
-    href: 'https://github.com/harsha2511kumari',
+    href: 'https://github.com/harsha2511/Tic-Tac-Toe',
   },
   {
     icon: '🍔',
@@ -64,7 +64,7 @@ const PROJECTS = [
       'Integrated Firebase Realtime Database for live menu and order status updates across all sessions.',
       'Built clean navigation flows between restaurant listings, cart, and order confirmation screens.',
     ],
-    href: 'https://github.com/harsha2511kumari',
+    href: 'https://github.com/harsha2511/Delicious-Point',
   },
   {
     icon: '📚',
@@ -80,7 +80,7 @@ const PROJECTS = [
       'Implemented 30-day web analytics to track usage patterns and identify the most accessed content.',
       'Built with responsive Bootstrap design and subtle animations for a clean, engaging experience.',
     ],
-    href: 'https://github.com/harsha2511kumari',
+    href: 'https://github.com/harsha2511/RIT-Notebook',
   },
   {
     icon: '📖',

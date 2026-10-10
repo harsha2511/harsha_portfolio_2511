@@ -68,7 +68,7 @@ export default function Sidebar({ isOpen, onClose }) {
         <div className="sb-socials">
           <a href="mailto:harshakumari1125@gmail.com" title="Email"><i className="fas fa-envelope" /></a>
           <a href="https://www.linkedin.com/in/harsha-kumari" target="_blank" rel="noreferrer" title="LinkedIn"><i className="fab fa-linkedin" /></a>
-          <a href="https://github.com/harsha2511kumari" target="_blank" rel="noreferrer" title="GitHub"><i className="fab fa-github" /></a>
+          <a href="https://github.com/harsha2511" target="_blank" rel="noreferrer" title="GitHub"><i className="fab fa-github" /></a>
           <a href="https://leetcode.com/u/harsha2511/" target="_blank" rel="noreferrer" title="LeetCode"><img src="https://cdn.simpleicons.org/leetcode" className="si" alt="LeetCode" /></a>
           <a href="https://codeforces.com/profile/harsha2511" target="_blank" rel="noreferrer" title="Codeforces"><img src="https://cdn.simpleicons.org/codeforces" className="si" alt="Codeforces" /></a>
           <a href="https://www.codechef.com/users/harsha_2511" target="_blank" rel="noreferrer" title="CodeChef"><img src="https://cdn.simpleicons.org/codechef" className="si" alt="CodeChef" /></a>
