@@ -17,7 +17,7 @@ export default function Contact() {
               Whether it's about tech, Android dev, ML, or just a friendly chat — feel free to reach out!
             </p>
             <div className="contact-info-cards">
-              <a href="mailto:harshakumari1125@gmail.com" className="contact-info-card">
+              <a href="mailto:harshakumari1125@gmail.com" className="brand-email contact-info-card">
                 <div className="cic-icon purple"><i className="fas fa-envelope" /></div>
                 <div>
                   <div className="cic-label">Email</div>
@@ -25,7 +25,7 @@ export default function Contact() {
                   <div className="cic-value">harshakumari1125@gmail.com</div>
                 </div>
               </a>
-              <a href="tel:+917250465929" className="contact-info-card">
+              <a href="tel:+917250465929" className="brand-phone contact-info-card">
                 <div className="cic-icon green"><i className="fas fa-phone" /></div>
                 <div>
                   <div className="cic-label">Phone</div>
@@ -33,7 +33,7 @@ export default function Contact() {
                   <div className="cic-value">+91 7250465929</div>
                 </div>
               </a>
-              <a href="https://wa.me/917250465929" target="_blank" rel="noreferrer" className="contact-info-card">
+              <a href="https://wa.me/917250465929" target="_blank" rel="noreferrer" className="brand-whatsapp contact-info-card">
                 <div className="cic-icon cyan"><i className="fab fa-whatsapp" /></div>
                 <div>
                   <div className="cic-label">WhatsApp</div>
@@ -52,13 +52,13 @@ export default function Contact() {
               </div>
               <p className="panel-desc">Connect on social platforms for updates and behind-the-scenes content.</p>
               <div className="social-grid">
-                <a href="https://www.linkedin.com/in/harsha-kumari" target="_blank" rel="noreferrer" className="social-item"><i className="fab fa-linkedin" /> LinkedIn</a>
-                <a href="https://github.com/harsha2511" target="_blank" rel="noreferrer" className="social-item"><i className="fab fa-github" /> GitHub</a>
-                <a href="https://leetcode.com/u/harsha2511/" target="_blank" rel="noreferrer" className="social-item"><img src="https://cdn.simpleicons.org/leetcode" className="si" alt="" /> LeetCode</a>
-                <a href="https://codeforces.com/" target="_blank" rel="noreferrer" className="social-item"><img src="https://cdn.simpleicons.org/codeforces" className="si" alt="" /> Codeforces</a>
-                <a href="https://www.codechef.com/users/harsha_2511" target="_blank" rel="noreferrer" className="social-item"><img src="https://cdn.simpleicons.org/codechef" className="si" alt="" /> CodeChef</a>
-                <a href="https://www.geeksforgeeks.org/user/harsha2511" target="_blank" rel="noreferrer" className="social-item"><img src="https://cdn.simpleicons.org/geeksforgeeks" className="si" alt="" /> GFG</a>
-                <a href="https://www.instagram.com/harsha__a_/" target="_blank" rel="noreferrer" className="social-item"><i className="fab fa-instagram" /> Instagram</a>
+                <a href="https://www.linkedin.com/in/harsha-kumari" target="_blank" rel="noreferrer" className="brand-linkedin social-item"><i className="fab fa-linkedin" /> LinkedIn</a>
+                <a href="https://github.com/harsha2511" target="_blank" rel="noreferrer" className="brand-github social-item"><i className="fab fa-github" /> GitHub</a>
+                <a href="https://leetcode.com/u/harsha2511/" target="_blank" rel="noreferrer" className="brand-leetcode social-item"><img src="https://cdn.simpleicons.org/leetcode" className="si" alt="" /> LeetCode</a>
+                <a href="https://codeforces.com/" target="_blank" rel="noreferrer" className="brand-codeforces social-item"><img src="https://cdn.simpleicons.org/codeforces" className="si" alt="" /> Codeforces</a>
+                <a href="https://www.codechef.com/users/harsha_2511" target="_blank" rel="noreferrer" className="brand-codechef social-item"><img src="https://cdn.simpleicons.org/codechef" className="si" alt="" /> CodeChef</a>
+                <a href="https://www.geeksforgeeks.org/user/harsha2511" target="_blank" rel="noreferrer" className="brand-gfg social-item"><img src="https://cdn.simpleicons.org/geeksforgeeks" className="si" alt="" /> GFG</a>
+                <a href="https://www.instagram.com/harsha__a_/" target="_blank" rel="noreferrer" className="brand-instagram social-item"><i className="fab fa-instagram" /> Instagram</a>
               </div>
             </div>
 

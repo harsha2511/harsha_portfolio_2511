@@ -37,12 +37,12 @@ export default function ProfileSidebar({ visible }) {
       <div className="ps-divider" />
 
       <div className="ps-socials">
-        <a href="https://github.com/harsha2511" target="_blank" rel="noreferrer" aria-label="GitHub" data-tip="GitHub"><i className="fab fa-github" /></a>
-        <a href="https://www.linkedin.com/in/harsha-kumari" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-tip="LinkedIn"><i className="fab fa-linkedin" /></a>
-        <a href="https://leetcode.com/u/harsha2511/" target="_blank" rel="noreferrer" aria-label="LeetCode" data-tip="LeetCode"><img src="https://cdn.simpleicons.org/leetcode" className="si" alt="LeetCode" /></a>
-        <a href="https://www.geeksforgeeks.org/user/harsha2511" target="_blank" rel="noreferrer" aria-label="GeeksforGeeks" data-tip="GeeksforGeeks"><img src="https://cdn.simpleicons.org/geeksforgeeks" className="si" alt="GeeksforGeeks" /></a>
-        <a href="https://www.codechef.com/users/harsha_2511" target="_blank" rel="noreferrer" aria-label="CodeChef" data-tip="CodeChef"><img src="https://cdn.simpleicons.org/codechef" className="si" alt="CodeChef" /></a>
-        <a href="https://www.instagram.com/harsha__a_/" target="_blank" rel="noreferrer" aria-label="Instagram" data-tip="Instagram"><i className="fab fa-instagram" /></a>
+        <a className="brand-github" href="https://github.com/harsha2511" target="_blank" rel="noreferrer" aria-label="GitHub" data-tip="GitHub"><i className="fab fa-github" /></a>
+        <a className="brand-linkedin" href="https://www.linkedin.com/in/harsha-kumari" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-tip="LinkedIn"><i className="fab fa-linkedin" /></a>
+        <a className="brand-leetcode" href="https://leetcode.com/u/harsha2511/" target="_blank" rel="noreferrer" aria-label="LeetCode" data-tip="LeetCode"><img src="https://cdn.simpleicons.org/leetcode" className="si" alt="LeetCode" /></a>
+        <a className="brand-gfg" href="https://www.geeksforgeeks.org/user/harsha2511" target="_blank" rel="noreferrer" aria-label="GeeksforGeeks" data-tip="GeeksforGeeks"><img src="https://cdn.simpleicons.org/geeksforgeeks" className="si" alt="GeeksforGeeks" /></a>
+        <a className="brand-codechef" href="https://www.codechef.com/users/harsha_2511" target="_blank" rel="noreferrer" aria-label="CodeChef" data-tip="CodeChef"><img src="https://cdn.simpleicons.org/codechef" className="si" alt="CodeChef" /></a>
+        <a className="brand-instagram" href="https://www.instagram.com/harsha__a_/" target="_blank" rel="noreferrer" aria-label="Instagram" data-tip="Instagram"><i className="fab fa-instagram" /></a>
       </div>
 
       <div className="ps-divider" />

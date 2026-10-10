@@ -162,11 +162,14 @@ html [data-anim].in      { opacity: 1; transform: none; filter: none; }
   border: 1px solid var(--border); color: var(--text); background: var(--card);
 }
 .btn-outline:hover { border-color: var(--accent); color: var(--accent); box-shadow: 0 0 16px rgba(37,99,235,0.12); }
+.btn-outline[class*="brand-"]:hover {
+  border-color: var(--brand); color: var(--brand);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--brand) 25%, transparent);
+}
 
-.btn img.si { width: 14px; height: 14px; vertical-align: middle; display: inline-block; filter: grayscale(1) brightness(1.4); transition: filter 0.25s; }
+.btn img.si { width: 14px; height: 14px; vertical-align: middle; display: inline-block; filter: grayscale(1) brightness(0.4); transition: filter 0.25s; }
+html.dark .btn img.si { filter: grayscale(1) brightness(1.4); }
 .btn:hover img.si { filter: none; }
-html.light .btn img.si { filter: grayscale(1) brightness(0.4); }
-html.light .btn:hover img.si { filter: none; }
 
 @keyframes fade-up { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
 
@@ -180,3 +183,17 @@ html.light .btn:hover img.si { filter: none; }
   section { padding: 3rem 1.1rem; }
   .section-line { margin-bottom: 1rem; }
 }
+
+/* ── Brand colours for social / contact icons (used on hover) ── */
+.brand-github     { --brand: #181717; --brand-ink: #fff; }
+.brand-linkedin   { --brand: #0a66c2; }
+.brand-leetcode   { --brand: #ffa116; }
+.brand-codeforces { --brand: #1f8acb; }
+.brand-codechef   { --brand: #5b4638; }
+.brand-gfg        { --brand: #2f8d46; }
+.brand-instagram  { --brand: #e4405f; }
+.brand-email      { --brand: #ea4335; }
+.brand-whatsapp   { --brand: #25d366; }
+.brand-phone      { --brand: #22c55e; }
+html.dark .brand-github   { --brand: #f0f6fc; --brand-ink: #0d1117; }
+html.dark .brand-codechef { --brand: #b08b72; }

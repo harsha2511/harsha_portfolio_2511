@@ -81,6 +81,7 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 11px;
+  flex-wrap: wrap; align-content: center; gap: 0.45rem; padding: 0 0.75rem;
   opacity: 0;
   transition: opacity 0.25s;
 }
@@ -95,6 +96,11 @@
   transition: transform 0.2s;
 }
 .achievement-card:hover .ach-view-btn { transform: scale(1.06); }
+a.ach-view-btn { text-decoration: none; }
+a.ach-view-btn:hover { filter: brightness(1.1); }
+
+/* Touch devices: no hover overlay, so multi-certificate cards show inline links */
+.ach-touch-links { display: none; }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
@@ -105,5 +111,8 @@
 }
 @media (hover: none) {
   .ach-hover-overlay { display: none; }
+  .ach-touch-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.8rem; margin-top: 0.45rem; }
+  .ach-touch-links a { font-size: 0.75rem; font-weight: 600; color: var(--ac); text-decoration: none; }
+  .ach-touch-links i { font-size: 0.6rem; }
   .achievement-card:hover { transform: none; }
 }

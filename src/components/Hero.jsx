@@ -39,10 +39,10 @@ export default function Hero() {
           <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn btn-primary">
             <i className="fas fa-file-arrow-down" /> Download Resume
           </a>
-          <a href="https://github.com/harsha2511" target="_blank" rel="noreferrer" className="btn btn-outline">
+          <a href="https://github.com/harsha2511" target="_blank" rel="noreferrer" className="brand-github btn btn-outline">
             <i className="fab fa-github" /> GitHub
           </a>
-          <a href="https://www.linkedin.com/in/harsha-kumari" target="_blank" rel="noreferrer" className="btn btn-outline">
+          <a href="https://www.linkedin.com/in/harsha-kumari" target="_blank" rel="noreferrer" className="brand-linkedin btn btn-outline">
             <i className="fab fa-linkedin" /> LinkedIn
           </a>
         </div>
