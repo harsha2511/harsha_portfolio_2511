@@ -9,15 +9,8 @@ const PROJECTS = [
     year: '2026',
     status: 'In progress',
     desc: 'AI scribe that listens to a doctor–patient visit, drafts a SOAP note, codes it to ICD-10/RxNorm/LOINC and writes it into the EHR.',
-    shortTech: ['React', 'FastAPI', 'Gemini'],
-    tech: ['React', 'TypeScript', 'Python', 'FastAPI', 'Gemini', 'Google Speech-to-Text', 'Whisper', 'FHIR R4', 'Docker', 'Chrome Extension'],
-    points: [
-      'Transcribes a live doctor–patient consultation and drafts a structured SOAP note with an LLM.',
-      'Maps diagnoses, medicines and lab tests to ICD-10, RxNorm and LOINC codes, then writes the note into the clinic’s EHR over FHIR R4.',
-      'Privacy by design: no database and no stored patient data — audio and text are processed in memory and discarded.',
-      'One React app shipped three ways: a full web app, a Chrome side-panel extension, and an assistant docked inside the EHR chart.',
-      'Includes its own FHIR R4 EHR with 50 synthetic patients, a PHI-leak audit, and an evaluation suite for note quality.',
-    ],
+    shortTech: ['React', 'TypeScript', 'FastAPI', 'Gemini', 'FHIR R4'],
+    comingSoon: true,
   },
   {
     icon: '💬',
@@ -25,15 +18,8 @@ const PROJECTS = [
     year: '2026',
     status: 'In progress',
     desc: 'ChatGPT-style AI assistant with streaming answers, projects, and video/audio summaries — no accounts and nothing stored.',
-    shortTech: ['React', 'Node.js', 'Gemini'],
-    tech: ['React', 'TypeScript', 'Node.js', 'Express', 'Gemini', 'Server-Sent Events', 'Tailwind CSS', 'TanStack Query', 'Vitest'],
-    points: [
-      'Streams answers token by token over Server-Sent Events, with a Stop button, Markdown rendering and copyable code blocks.',
-      'Sidebar to create, rename and delete chats, plus Projects with custom instructions and reference files.',
-      'Summarizes YouTube links and uploaded video/audio files into an overview, timestamped details, key points and a summary.',
-      'Stateless and private: no database or accounts — conversations live only in the browser tab.',
-      'Multilingual (English, Spanish, French) and fully responsive down to phone width.',
-    ],
+    shortTech: ['React', 'TypeScript', 'Node.js', 'Express', 'Gemini'],
+    comingSoon: true,
   },
   {
     icon: '🔬',
@@ -242,12 +228,22 @@ export default function Projects() {
                 </a>
               )}
             </div>
-            <div className="proj-modal-tech">
-              {selected.tech.map(t => <span key={t} className="tech-badge">{t}</span>)}
-            </div>
-            <ul className="proj-modal-points">
-              {selected.points.map((pt, j) => <li key={j}>{pt}</li>)}
-            </ul>
+            {selected.comingSoon ? (
+              <div className="proj-coming-soon">
+                <i className="fas fa-hourglass-half" />
+                <div className="proj-coming-soon-title">Coming Soon</div>
+                <p>Details for this project will be shared here shortly.</p>
+              </div>
+            ) : (
+              <>
+                <div className="proj-modal-tech">
+                  {selected.tech.map(t => <span key={t} className="tech-badge">{t}</span>)}
+                </div>
+                <ul className="proj-modal-points">
+                  {selected.points.map((pt, j) => <li key={j}>{pt}</li>)}
+                </ul>
+              </>
+            )}
           </div>
         </div>,
         document.body

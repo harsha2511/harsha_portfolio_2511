@@ -4,6 +4,8 @@
 .achievement-card.purple { --ac: #a855f7; }
 .achievement-card.green  { --ac: #22c55e; }
 .achievement-card.red    { --ac: #ef4444; }
+.achievement-card.cyan   { --ac: #06b6d4; }
+.achievement-card.amber  { --ac: #f97316; }
 
 /* ── Grid ── */
 .achievements-grid {
