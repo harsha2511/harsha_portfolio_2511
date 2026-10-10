@@ -13,6 +13,9 @@ const RULES = [
   ['.skill-tag', 'pop', { nested: true, step: 0.035 }],
   ['.timeline-item, .edu-item', 'left'],
   ['.reveal', 'up'],
+  // Already marked by an earlier run (React dev runs effects twice, and hot
+  // reloads rerun them) but no longer matching above: keep its variant.
+  ['[data-anim]', null],
 ];
 
 const DRAW = '.timeline, .edu-timeline';
@@ -30,7 +33,7 @@ export default function useScrollAnimations() {
           return;
         }
         el.classList.remove('reveal', 'reveal-left', 'reveal-right');
-        el.dataset.anim = variant;
+        if (variant) el.dataset.anim = variant;
         tagged.add(el);
         if (opts.step) {
           const n = groups.get(el.parentElement) ?? 0;
