@@ -120,13 +120,74 @@
 .proj-modal-points strong { color: var(--text); }
 
 .proj-coming-soon {
-  text-align: center; padding: 2rem 1rem 1rem;
-  color: var(--muted); font-size: 0.9rem;
+  text-align: center; padding: 1.25rem 0.5rem 0.25rem;
 }
-.proj-coming-soon i { font-size: 2rem; color: var(--accent2); margin-bottom: 0.75rem; }
-.proj-coming-soon-title {
-  font-size: 1.4rem; font-weight: 800; color: var(--highlight);
-  margin-bottom: 0.35rem;
+
+.cs-orb {
+  position: relative; width: 84px; height: 84px; margin: 0 auto 1.4rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent3));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.9rem;
+  box-shadow: 0 10px 30px rgba(37,99,235,0.35);
+}
+.cs-orb i { animation: cs-float 2.6s ease-in-out infinite; }
+.cs-ring {
+  position: absolute; inset: 0; border-radius: 50%;
+  border: 2px solid var(--accent2);
+  animation: cs-pulse 2.4s ease-out infinite;
+}
+.cs-ring-2 { animation-delay: 1.2s; }
+@keyframes cs-pulse { from { transform: scale(1); opacity: 0.6 } to { transform: scale(1.7); opacity: 0 } }
+@keyframes cs-float { 0%, 100% { transform: translateY(2px) rotate(-8deg) } 50% { transform: translateY(-4px) rotate(-8deg) } }
+
+.cs-title {
+  font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15;
+  background: linear-gradient(90deg, var(--accent), var(--accent3));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  margin-bottom: 0.6rem;
+}
+.cs-text {
+  font-size: 0.9rem; color: var(--muted); line-height: 1.65;
+  max-width: 380px; margin: 0 auto 1.5rem;
+}
+
+.cs-progress { max-width: 320px; margin: 0 auto 1.5rem; text-align: left; }
+.cs-progress-label {
+  display: flex; justify-content: space-between;
+  font-size: 0.72rem; font-family: 'Fira Code', monospace; color: var(--muted);
+  margin-bottom: 0.45rem;
+}
+.cs-dot {
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  background: #f59e0b; margin-right: 0.3rem; vertical-align: 1px;
+  animation: cs-blink 1.4s ease-in-out infinite;
+}
+@keyframes cs-blink { 50% { opacity: 0.3 } }
+.cs-bar {
+  height: 6px; border-radius: 100px; overflow: hidden;
+  background: var(--bg2); border: 1px solid var(--border);
+}
+.cs-bar span {
+  display: block; height: 100%; width: 65%; border-radius: 100px;
+  background: linear-gradient(90deg, var(--accent), var(--accent3), var(--accent));
+  background-size: 200% 100%;
+  animation: cs-shimmer 2s linear infinite;
+}
+@keyframes cs-shimmer { from { background-position: 200% 0 } to { background-position: 0 0 } }
+
+.cs-tech {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.4rem;
+  padding-top: 1.25rem; border-top: 1px dashed var(--border);
+}
+.cs-tech-label {
+  font-size: 0.7rem; font-family: 'Fira Code', monospace; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-right: 0.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-orb i, .cs-ring, .cs-dot, .cs-bar span { animation: none; }
+  .cs-ring { display: none; }
 }
 
 /* ── Responsive ── */

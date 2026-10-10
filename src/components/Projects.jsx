@@ -230,9 +230,26 @@ export default function Projects() {
             </div>
             {selected.comingSoon ? (
               <div className="proj-coming-soon">
-                <i className="fas fa-hourglass-half" />
-                <div className="proj-coming-soon-title">Coming Soon</div>
-                <p>Details for this project will be shared here shortly.</p>
+                <div className="cs-orb">
+                  <span className="cs-ring" />
+                  <span className="cs-ring cs-ring-2" />
+                  <i className="fas fa-rocket" />
+                </div>
+                <div className="cs-title">Coming Soon</div>
+                <p className="cs-text">
+                  This project is being built right now. A full breakdown of the
+                  architecture, features and a live demo is on its way.
+                </p>
+                <div className="cs-progress">
+                  <div className="cs-progress-label">
+                    <span><span className="cs-dot" /> In development</span>
+                  </div>
+                  <div className="cs-bar"><span /></div>
+                </div>
+                <div className="cs-tech">
+                  <span className="cs-tech-label">Built with</span>
+                  {selected.shortTech.map(t => <span key={t} className="tech-badge">{t}</span>)}
+                </div>
               </div>
             ) : (
               <>
